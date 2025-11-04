@@ -1,0 +1,63 @@
+:root {
+  /* ===== 기본 컬러 시스템 ===== */
+  --background: #F7FFF0;
+  --surface: #FFFFFF;
+  --surface-alt: #F0F5EA;
+  --surface-hover: #EAF2E0;
+  --foreground: #285430;
+  --border: #D9EAD3;
+  --divider: #E0E0E0;
+
+  /* ===== 브랜드 / 강조 ===== */
+  --primary: #89D85B;
+  --secondary: #B7E4C7;
+  --accent: #E94560;
+
+  /* ===== 텍스트 ===== */
+  --text-strong: #1B1B1B;
+  --text-subtle: #6B7280;
+  --text-muted: #A8A8A8;
+
+  /* ===== 상태 컬러 ===== */
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --error: #F44336;
+  --info: #2196F3;
+
+  /* ===== 인터랙션 / 상태 ===== */
+  --focus-ring: #89D85B;
+  --disabled: #CFCFCF;
+  --highlight: #FFF59D;
+}
+
+.dark {
+  /* ===== 기본 컬러 시스템 ===== */
+  --background: #1A1A2E;
+  --surface: #16213E;
+  --surface-alt: #1E2A47;
+  --surface-hover: #1F3150;
+  --foreground: #F5F5F5;
+  --border: #303656;
+  --divider: #2C2F40;
+
+  /* ===== 브랜드 / 강조 ===== */
+  --primary: #0F3460;
+  --secondary: #2D4059;
+  --accent: #E94560;
+
+  /* ===== 텍스트 ===== */
+  --text-strong: #FFFFFF;
+  --text-subtle: #CCCCCC;
+  --text-muted: #AAAAAA;
+
+  /* ===== 상태 컬러 ===== */
+  --success: #81C784;
+  --warning: #FFD54F;
+  --error: #E57373;
+  --info: #64B5F6;
+
+  /* ===== 인터랙션 / 상태 ===== */
+  --focus-ring: #0F3460;
+  --disabled: #555555;
+  --highlight: #2E3B60;
+}
