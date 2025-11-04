@@ -1,59 +1,97 @@
 :root {
-  /* ===== Windows Classic Base ===== */
-  --background: #E5E5E5;      /* 시스템 창 배경 회색 */
-  --surface: #F2F2F2;         /* 폼/컨트롤 배경 */
-  --surface-alt: #DADADA;     /* 버튼, 박스의 입체적 배경 */
-  --surface-hover: #CFCFCF;   /* hover 시 진한 회색 */
-  --foreground: #000000;      /* 기본 텍스트 색 */
-  --border: #9A9A9A;          /* 컨트롤 외곽선 */
-  --divider: #BEBEBE;         /* 구분선 */
+  /* ===== Base (Light • High-Contrast) ===== */
+  --background: #F5F7F9;
+  --surface: #FFFFFF;
+  --surface-alt: #EEF2F6;
+  --surface-hover: #E7EDF3;
+  --foreground: #0F1419;
+  --border: #D1D9E0;
+  --divider: #E3E8EE;
 
-  /* ===== Accent / Primary ===== */
-  --primary: #0055E6;         /* Windows XP~7 느낌의 파랑 */
-  --secondary: #7CA6F9;       /* 밝은 하이라이트 블루 */
-  --accent: #FFCC00;          /* 포인트용 옐로우 */
+  /* ===== Brand / Actions ===== */
+  --primary: #1473E6;    /* 주 액션(확인/적용) */
+  --secondary: #5C6C7A;  /* 보조 액션/네비 */
+  --accent: #00C2FF;     /* 강조, 선택, 링크 */
 
   /* ===== Text ===== */
-  --text-strong: #000000;
-  --text-subtle: #3C3C3C;
-  --text-muted: #6F6F6F;
+  --text-strong: #0B0F14;
+  --text-subtle: #46525C;
+  --text-muted:  #8A97A3;
 
   /* ===== States ===== */
-  --success: #4CAF50;
-  --warning: #FFB300;
-  --error:   #C62828;
-  --info:    #1976D2;
+  --success: #00A35C;   /* 정상/가동 */
+  --warning: #FFB000;   /* 주의 */
+  --error:   #D32F2F;   /* 치명/인터락트 */
+  --info:    #1E88E5;   /* 정보 */
 
   /* ===== Interaction ===== */
-  --focus-ring: #0055E6;       /* 포커스 블루 */
-  --disabled:   #C4C4C4;
-  --highlight:  #CCE0FF;       /* 선택 영역 하이라이트 */
+  --focus-ring: #00C2FF;
+  --disabled:   #C0C7CF;
+  --highlight:  #FFF3BF; /* 선택/드래그 */
+
+  /* ===== Alarms (ISA/공통 실무 관례에 맞춘 심각도 맵) ===== */
+  --alarm-critical: #D00000; /* 비상정지(ESTOP)/치명 */
+  --alarm-major:    #FF6A00; /* 주요 경보 */
+  --alarm-minor:    #FFD400; /* 경미 경보 */
+  --alarm-advisory: #2F80ED; /* 권고/주의 메시지 */
+  --alarm-normal:   #00A35C; /* 정상 복귀 */
+  --alarm-shelved:  #8E5DFF; /* 보류/일시무시 */
+  --alarm-ack:      #6B7280; /* 인지됨 상태 표시 */
+
+  /* ===== Trend / Chart (색맹친화 Okabe–Ito 계열) ===== */
+  --trend-1: #0072B2;
+  --trend-2: #E69F00;
+  --trend-3: #009E73;
+  --trend-4: #D55E00;
+  --trend-5: #CC79A7;
+  --trend-6: #56B4E9;
 }
 
 .dark {
-  /* ===== Windows Dark Mode (Modern MFC 느낌) ===== */
-  --background: #1E1E1E;
-  --surface: #2A2A2A;
-  --surface-alt: #333333;
-  --surface-hover: #3A3A3A;
-  --foreground: #EAEAEA;
-  --border: #4A4A4A;
-  --divider: #555555;
+  /* ===== Base (Dark • High-Contrast) ===== */
+  --background: #0D1117;
+  --surface: #161B22;
+  --surface-alt: #1C2430;
+  --surface-hover: #213041;
+  --foreground: #E6EDF3;
+  --border: #2B3642;
+  --divider: #2A3440;
 
-  --primary: #2B7BFF;
-  --secondary: #5C9DFF;
-  --accent: #FFC107;
+  /* ===== Brand / Actions ===== */
+  --primary: #2F81F7;
+  --secondary: #8B97A3;
+  --accent: #00D1FF;
 
+  /* ===== Text ===== */
   --text-strong: #FFFFFF;
-  --text-subtle: #CCCCCC;
-  --text-muted: #999999;
+  --text-subtle: #C6D0DB;
+  --text-muted:  #9AA7B3;
 
-  --success: #81C784;
-  --warning: #FFD54F;
-  --error:   #E57373;
-  --info:    #64B5F6;
+  /* ===== States ===== */
+  --success: #21C17A;
+  --warning: #FFC44D;
+  --error:   #FF5D5D;
+  --info:    #58A6FF;
 
-  --focus-ring: #2B7BFF;
-  --disabled:   #555555;
-  --highlight:  #294B7A;
+  /* ===== Interaction ===== */
+  --focus-ring: #00D1FF;
+  --disabled:   #3B4552;
+  --highlight:  #2A3B55;
+
+  /* ===== Alarms ===== */
+  --alarm-critical: #FF4D4D;
+  --alarm-major:    #FF8C3A;
+  --alarm-minor:    #FFD966;
+  --alarm-advisory: #58A6FF;
+  --alarm-normal:   #21C17A;
+  --alarm-shelved:  #B392F0;
+  --alarm-ack:      #A0A6AD;
+
+  /* ===== Trend / Chart ===== */
+  --trend-1: #56B4E9;
+  --trend-2: #E69F00;
+  --trend-3: #009E73;
+  --trend-4: #F5793A;
+  --trend-5: #B07AA1;
+  --trend-6: #92C6FF;
 }
