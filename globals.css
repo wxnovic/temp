@@ -1,59 +1,59 @@
 :root {
-  /* ===== Starbucks-inspired Base ===== */
-  --background: #F7F5F0;   /* 따뜻한 크림 */
-  --surface: #FFFFFF;
-  --surface-alt: #F1F8F6;  /* 라이트 민트 */
-  --surface-hover: #D4E9E2;/* 민트 톤 호버 */
-  --foreground: #1E3932;   /* 딥 그린(헤드라인/본문) */
-  --border: #D9E5E0;
-  --divider: #E6ECE9;
+  /* ===== Windows Classic Base ===== */
+  --background: #E5E5E5;      /* 시스템 창 배경 회색 */
+  --surface: #F2F2F2;         /* 폼/컨트롤 배경 */
+  --surface-alt: #DADADA;     /* 버튼, 박스의 입체적 배경 */
+  --surface-hover: #CFCFCF;   /* hover 시 진한 회색 */
+  --foreground: #000000;      /* 기본 텍스트 색 */
+  --border: #9A9A9A;          /* 컨트롤 외곽선 */
+  --divider: #BEBEBE;         /* 구분선 */
 
-  /* ===== Brand / Accent ===== */
-  --primary: #006241;      /* 스타벅스 그린 */
-  --secondary: #00754A;    /* 에메랄드 그린 */
-  --accent: #CBA258;       /* 골드 포인트 */
+  /* ===== Accent / Primary ===== */
+  --primary: #0055E6;         /* Windows XP~7 느낌의 파랑 */
+  --secondary: #7CA6F9;       /* 밝은 하이라이트 블루 */
+  --accent: #FFCC00;          /* 포인트용 옐로우 */
 
   /* ===== Text ===== */
-  --text-strong: #0B1F1A;  /* 거의 블랙에 가까운 딥그린계 흑색 */
-  --text-subtle: #5C6B66;  /* 그레이시 그린 */
-  --text-muted: #9AA6A0;
+  --text-strong: #000000;
+  --text-subtle: #3C3C3C;
+  --text-muted: #6F6F6F;
 
   /* ===== States ===== */
-  --success: #2E7D32;      /* 자연스러운 그린 성공 */
-  --warning: #C88A2A;      /* 골드/캐러멜 경고 */
-  --error:   #B91C1C;      /* 톤다운 레드 */
-  --info:    #1D4ED8;      /* 블루 정보 */
+  --success: #4CAF50;
+  --warning: #FFB300;
+  --error:   #C62828;
+  --info:    #1976D2;
 
   /* ===== Interaction ===== */
-  --focus-ring: #00754A;   /* 세컨더리 그린 */
-  --disabled:   #C9D3CF;
-  --highlight:  #FFF4CC;   /* 크림 옐로 하이라이트 */
+  --focus-ring: #0055E6;       /* 포커스 블루 */
+  --disabled:   #C4C4C4;
+  --highlight:  #CCE0FF;       /* 선택 영역 하이라이트 */
 }
 
 .dark {
-  /* ===== Starbucks-inspired Dark ===== */
-  --background: #0E1916;   /* 에스프레소+그린 느낌 배경 */
-  --surface: #132720;      /* 카드 배경 */
-  --surface-alt: #163026;  /* 한 단계 밝은 카드 */
-  --surface-hover: #1C3A2D;
-  --foreground: #E8F2EF;   /* 본문 텍스트 */
-  --border: #224338;
-  --divider: #1F3A32;
+  /* ===== Windows Dark Mode (Modern MFC 느낌) ===== */
+  --background: #1E1E1E;
+  --surface: #2A2A2A;
+  --surface-alt: #333333;
+  --surface-hover: #3A3A3A;
+  --foreground: #EAEAEA;
+  --border: #4A4A4A;
+  --divider: #555555;
 
-  --primary: #1E3932;      /* 다크에선 깊은 그린을 메인으로 */
-  --secondary: #1F7A5B;    /* 약간 밝은 에메랄드 */
-  --accent: #CBA258;       /* 골드 유지 (다크에서도 잘 보임) */
+  --primary: #2B7BFF;
+  --secondary: #5C9DFF;
+  --accent: #FFC107;
 
   --text-strong: #FFFFFF;
-  --text-subtle: #CDE0D9;
-  --text-muted:  #9FB5AE;
+  --text-subtle: #CCCCCC;
+  --text-muted: #999999;
 
-  --success: #4CAF50;
-  --warning: #E6B86A;
-  --error:   #F28B82;
-  --info:    #93C5FD;
+  --success: #81C784;
+  --warning: #FFD54F;
+  --error:   #E57373;
+  --info:    #64B5F6;
 
-  --focus-ring: #00A371;   /* 다크에서 대비 높은 포커스 */
-  --disabled:   #37524A;
-  --highlight:  #244D3E;   /* 선택 영역 등 어두운 하이라이트 */
+  --focus-ring: #2B7BFF;
+  --disabled:   #555555;
+  --highlight:  #294B7A;
 }
