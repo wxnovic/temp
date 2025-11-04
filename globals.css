@@ -1,63 +1,59 @@
 :root {
-  /* ===== 기본 컬러 시스템 ===== */
-  --background: #F7FFF0;
+  /* ===== Starbucks-inspired Base ===== */
+  --background: #F7F5F0;   /* 따뜻한 크림 */
   --surface: #FFFFFF;
-  --surface-alt: #F0F5EA;
-  --surface-hover: #EAF2E0;
-  --foreground: #285430;
-  --border: #D9EAD3;
-  --divider: #E0E0E0;
+  --surface-alt: #F1F8F6;  /* 라이트 민트 */
+  --surface-hover: #D4E9E2;/* 민트 톤 호버 */
+  --foreground: #1E3932;   /* 딥 그린(헤드라인/본문) */
+  --border: #D9E5E0;
+  --divider: #E6ECE9;
 
-  /* ===== 브랜드 / 강조 ===== */
-  --primary: #89D85B;
-  --secondary: #B7E4C7;
-  --accent: #E94560;
+  /* ===== Brand / Accent ===== */
+  --primary: #006241;      /* 스타벅스 그린 */
+  --secondary: #00754A;    /* 에메랄드 그린 */
+  --accent: #CBA258;       /* 골드 포인트 */
 
-  /* ===== 텍스트 ===== */
-  --text-strong: #1B1B1B;
-  --text-subtle: #6B7280;
-  --text-muted: #A8A8A8;
+  /* ===== Text ===== */
+  --text-strong: #0B1F1A;  /* 거의 블랙에 가까운 딥그린계 흑색 */
+  --text-subtle: #5C6B66;  /* 그레이시 그린 */
+  --text-muted: #9AA6A0;
 
-  /* ===== 상태 컬러 ===== */
-  --success: #4CAF50;
-  --warning: #FFC107;
-  --error: #F44336;
-  --info: #2196F3;
+  /* ===== States ===== */
+  --success: #2E7D32;      /* 자연스러운 그린 성공 */
+  --warning: #C88A2A;      /* 골드/캐러멜 경고 */
+  --error:   #B91C1C;      /* 톤다운 레드 */
+  --info:    #1D4ED8;      /* 블루 정보 */
 
-  /* ===== 인터랙션 / 상태 ===== */
-  --focus-ring: #89D85B;
-  --disabled: #CFCFCF;
-  --highlight: #FFF59D;
+  /* ===== Interaction ===== */
+  --focus-ring: #00754A;   /* 세컨더리 그린 */
+  --disabled:   #C9D3CF;
+  --highlight:  #FFF4CC;   /* 크림 옐로 하이라이트 */
 }
 
 .dark {
-  /* ===== 기본 컬러 시스템 ===== */
-  --background: #1A1A2E;
-  --surface: #16213E;
-  --surface-alt: #1E2A47;
-  --surface-hover: #1F3150;
-  --foreground: #F5F5F5;
-  --border: #303656;
-  --divider: #2C2F40;
+  /* ===== Starbucks-inspired Dark ===== */
+  --background: #0E1916;   /* 에스프레소+그린 느낌 배경 */
+  --surface: #132720;      /* 카드 배경 */
+  --surface-alt: #163026;  /* 한 단계 밝은 카드 */
+  --surface-hover: #1C3A2D;
+  --foreground: #E8F2EF;   /* 본문 텍스트 */
+  --border: #224338;
+  --divider: #1F3A32;
 
-  /* ===== 브랜드 / 강조 ===== */
-  --primary: #0F3460;
-  --secondary: #2D4059;
-  --accent: #E94560;
+  --primary: #1E3932;      /* 다크에선 깊은 그린을 메인으로 */
+  --secondary: #1F7A5B;    /* 약간 밝은 에메랄드 */
+  --accent: #CBA258;       /* 골드 유지 (다크에서도 잘 보임) */
 
-  /* ===== 텍스트 ===== */
   --text-strong: #FFFFFF;
-  --text-subtle: #CCCCCC;
-  --text-muted: #AAAAAA;
+  --text-subtle: #CDE0D9;
+  --text-muted:  #9FB5AE;
 
-  /* ===== 상태 컬러 ===== */
-  --success: #81C784;
-  --warning: #FFD54F;
-  --error: #E57373;
-  --info: #64B5F6;
+  --success: #4CAF50;
+  --warning: #E6B86A;
+  --error:   #F28B82;
+  --info:    #93C5FD;
 
-  /* ===== 인터랙션 / 상태 ===== */
-  --focus-ring: #0F3460;
-  --disabled: #555555;
-  --highlight: #2E3B60;
+  --focus-ring: #00A371;   /* 다크에서 대비 높은 포커스 */
+  --disabled:   #37524A;
+  --highlight:  #244D3E;   /* 선택 영역 등 어두운 하이라이트 */
 }
