@@ -1,57 +1,35 @@
-from rest_framework import generics, status
-from rest_framework.permissions import AllowAny, IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
 
-from .serializers import RegisterSerializer
+User = get_user_model()
 
 
-class RegisterView(generics.CreateAPIView):
-    """
-    POST /api/auth/register/
-    {
-      "username": "testuser",
-      "email": "test@example.com",
-      "password": "...",
-      "password2": "..."
-    }
-    """
-    serializer_class = RegisterSerializer
-    permission_classes = [AllowAny]
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    # 기본 username_field를 email로 변경
+    username_field = "email"
 
+    @classmethod
+    def get_token(cls, user):
+        # 기본 토큰 생성
+        token = super().get_token(user)
 
-class LogoutView(APIView):
-    """
-    클라이언트가 갖고 있던 refresh 토큰을 서버 측에서 블랙리스트에 등록
-    -> 이후 그 refresh 토큰은 더 이상 사용 불가 (논리적 로그아웃)
-    """
-    permission_classes = [IsAuthenticated]
+        # 여기에 커스텀 클레임 추가 (JWT 안에 들어가는 값)
+        token["username"] = user.username
+        token["email"] = user.email
+        token["is_staff"] = user.is_staff
 
-    def post(self, request):
-        try:
-            refresh_token = request.data["refresh"]
-            token = RefreshToken(refresh_token)
-            token.blacklist()
-            return Response(status=status.HTTP_205_RESET_CONTENT)
-        except Exception:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+        return token
 
+    def validate(self, attrs):
+        # 기본 로그인 검증 (email + password)
+        data = super().validate(attrs)
 
-class ProfileView(APIView):
-    """
-    JWT access 토큰이 있어야 접근 가능한 테스트용 보호 API
-    GET /api/auth/profile/
-    Authorization: Bearer <access_token>
-    """
-    permission_classes = [IsAuthenticated]
+        # 응답 바디에 추가로 유저 정보 더 넣기 (프론트에서 쓰기 편하게)
+        data["user"] = {
+            "id": self.user.id,
+            "username": self.user.username,
+            "email": self.user.email,
+            "is_staff": self.user.is_staff,
+        }
 
-    def get(self, request):
-        user = request.user
-        return Response(
-            {
-                "id": user.id,
-                "username": user.username,
-                "email": user.email,
-            }
-        )
+        return data
