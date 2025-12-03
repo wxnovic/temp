@@ -11,3 +11,34 @@ GRANT ALL ON TABLES TO sts2web;
 
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT ALL ON SEQUENCES TO sts2web;
+
+
+
+
+-- 16
+
+-- 1. DB 생성
+CREATE DATABASE sts2web;
+
+-- 2. 유저 생성
+CREATE USER sts2web WITH PASSWORD '비밀번호';
+
+-- 3. DB 접근 권한
+GRANT ALL PRIVILEGES ON DATABASE sts2web TO sts2web;
+
+-- 4. 스키마 권한
+GRANT ALL ON SCHEMA public TO sts2web;
+
+-- 5. 이미 존재하는 테이블 권한
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO sts2web;
+
+-- 6. 이미 존재하는 시퀀스 권한
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO sts2web;
+
+-- 7. 앞으로 생성될 테이블의 기본 권한
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT ALL ON TABLES TO sts2web;
+
+-- 8. 앞으로 생성될 시퀀스의 기본 권한
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+GRANT ALL ON SEQUENCES TO sts2web;
