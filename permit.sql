@@ -58,3 +58,11 @@ GRANT ALL ON SEQUENCES TO sts2web;
 | 트랜잭션       | 약함                             | 매우 강력함                       |
 | 기본 정규화/무결성 | 낮음                             | 매우 엄격                        |
 
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(150) NOT NULL,
+    email VARCHAR(255),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
