@@ -42,3 +42,19 @@ GRANT ALL ON TABLES TO sts2web;
 -- 8. 앞으로 생성될 시퀀스의 기본 권한
 ALTER DEFAULT PRIVILEGES IN SCHEMA public
 GRANT ALL ON SEQUENCES TO sts2web;
+
+| 기능         | MySQL                          | PostgreSQL                   |
+| ---------- | ------------------------------ | ---------------------------- |
+| DB 목록 보기   | `SHOW DATABASES;`              | `\l`                         |
+| DB 변경      | `USE dbname;`                  | `\c dbname` (USE 없음)         |
+| 테이블 목록     | `SHOW TABLES;`                 | `\dt`                        |
+| 테이블 구조     | `DESC table;`                  | `\d table`                   |
+| 컬럼 상세      | `SHOW COLUMNS FROM table;`     | `\d table` or `\d+ table`    |
+| 현재 DB      | `SELECT DATABASE();`           | `SELECT current_database();` |
+| 유저 목록      | `SELECT user FROM mysql.user;` | `\du`                        |
+| SQL 실행 툴   | mysql CLI                      | psql CLI                     |
+| 자동 증가      | AUTO_INCREMENT                 | SERIAL 또는 IDENTITY           |
+| JSON 기능    | 약함                             | 매우 강력함                       |
+| 트랜잭션       | 약함                             | 매우 강력함                       |
+| 기본 정규화/무결성 | 낮음                             | 매우 엄격                        |
+
