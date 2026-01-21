@@ -1,95 +1,66 @@
-/* global-colors.css */
-/* MFC / Windows 95 Style */
-
-/* Light Theme – Win95/MFC 느낌 */
 :root {
-  /* Base layout */
-  --background: #C0C0C0;       /* 전형적인 Win95 회색 바탕 */
-  --foreground: #000000;       /* 기본 텍스트 검정 */
-  --surface: #FFFFFF;          /* 대화상자, 메인 패널 */
-  --surface-soft: #D4D0C8;     /* 폼 배경, 리스트 배경 */
-  --surface-strong: #A0A0A0;   /* 툴바/헤더, 비활성 영역 */
+  /* Layout */
+  --sidebar-width: 300px;
+  --header-height: 55px;
 
-  --border: #808080;           /* 기본 테두리 (어두운 면) */
-  --border-strong: #404040;    /* 더 강한 테두리, 분리선 */
+  /* Backgrounds (cool, steel-like) */
+  --background: #f3f6fa;   /* 쿨 라이트 그레이 */
+  --surface:    #ffffff;
 
-  /* Brand – Primary (클래식 파란 타이틀바 느낌) */
-  --primary: #000080;              /* 진한 네이비 블루 (Active Title Bar) */
-  --primary-soft: #6F8CD9;         /* 비활성/호버용 파랑 */
-  --primary-strong: #000050;       /* 눌린 버튼, 강조 라인 */
-  --primary-foreground: #FFFFFF;   /* 타이틀바 텍스트, 버튼 텍스트 */
+  /* Text (dense, corporate) */
+  --foreground: #0f172a;   /* 딥 네이비(단단한 인상) */
+  --text-muted: #475569;   /* slate 계열 */
 
-  /* Secondary – 시스템 하늘색/티얼 계열 */
-  --secondary: #008080;            /* 옛날 MFC에서 자주 보이던 티얼 */
-  --secondary-soft: #C0FFFF;       /* 선택 영역, 하이라이트 백그라운드 */
-  --secondary-foreground: #000000; /* 티얼 위의 텍스트 */
+  /* Interaction (POSCO-like blue/teal) */
+  --primary:   #0b4ea2;    /* 코어 블루 */
+  --secondary: #0f7b8a;    /* 청록 포인트 */
+  --accent:    #c25a12;    /* 산업적인 앰버(과하지 않게) */
 
-  /* Accent – 경고/포인트 색 (레드 계열) */
-  --accent: #C00000;               /* 에러, 중요한 버튼 */
-  --accent-soft: #FFD0D0;          /* 에러 영역 배경 */
-  --accent-foreground: #FFFFFF;    /* 레드 위의 텍스트 */
+  /* Borders (steel gray) */
+  --border: #c2cad6;
 
-  /* Text */
-  --text-muted: #555555;           /* 비활성 텍스트, 설명 */
-  --text-subtle: #333333;          /* 일반 텍스트보다 살짝 약한 느낌 */
+  /* Status */
+  --success: #157a4b;
+  --warning: #b45309;
+  --error:   #b42318;
 
-  /* States (Win95 느낌 색 보정) */
-  --success: #008000;              /* 녹색 체크, 성공 메시지 */
-  --warning: #CC8400;              /* 주황 계열 경고 */
-  --error: #C00000;                /* 오류 메시지 */
-  --info: #000080;                 /* 정보 메시지, 링크 */
+  /* Focus */
+  --focus-ring: #2563eb;
 
-  /* Shadows – 입체감 표현용 */
-  --shadow-soft: 
-    1px 1px 0 #FFFFFF,             /* 위/왼쪽 하이라이트 */
-    -1px -1px 0 #808080;           /* 아래/오른쪽 그림자 */
-  --shadow-strong: 
-    2px 2px 0 #404040, 
-    -1px -1px 0 #FFFFFF;
+  /* On-colors */
+  --on-primary:   #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent:    #ffffff;
+  --on-surface:   #0f172a;
 }
 
-/* Dark Theme – 현대식 다크 + Win95 무드 유지 */
 .dark {
-  /* Base layout */
-  --background: #121212;        /* 전체 배경 */
-  --foreground: #F5F5F5;
-  --surface: #1E1E1E;           /* 패널, 창 배경 */
-  --surface-soft: #252525;      /* 리스트/카드 배경 */
-  --surface-strong: #2E2E2E;    /* 상단 바, 강조 영역 */
-
-  --border: #4A4A4A;
-  --border-strong: #707070;
-
-  /* Primary – 어두운 배경에서 떠 보이는 Win95 블루 */
-  --primary: #1E3A8A;           /* 약간 밝힌 네이비 블루 */
-  --primary-soft: #2F4FAE;      /* 호버용 */
-  --primary-strong: #0B1F5E;    /* 눌림 상태, 포커스 */
-  --primary-foreground: #E5E7EB;
-
-  /* Secondary – 티얼 계열 유지 */
-  --secondary: #0F766E;
-  --secondary-soft: #115E59;
-  --secondary-foreground: #ECFEFF;
-
-  /* Accent – 클래식 레드 계열 유지 */
-  --accent: #EF4444;
-  --accent-soft: #7A1E1E;
-  --accent-foreground: #FEF2F2;
+  /* Backgrounds (deep steel) */
+  --background: #0b1220;  /* 딥 네이비-블랙 */
+  --surface:    #111a2b;  /* 카드: 살짝 밝게 */
 
   /* Text */
-  --text-muted: #A3A3A3;
-  --text-subtle: #D4D4D4;
+  --foreground: #eef2f7;  /* 차가운 화이트 */
+  --text-muted: #a9b4c3;
 
-  /* States */
-  --success: #22C55E;
-  --warning: #EAB308;
-  --error: #F97373;
-  --info: #60A5FA;
+  /* Interaction */
+  --primary:   #4ea1ff;   /* 다크에서 빛나는 블루 */
+  --secondary: #35c6d1;   /* 청록 */
+  --accent:    #ff8a3d;   /* 앰버/오렌지 */
 
-  /* Shadows – 살짝 입체감을 주는 느낌 */
-  --shadow-soft:
-    1px 1px 0 #000000,
-    -1px -1px 0 #3F3F46;
-  --shadow-strong:
-    2px 2px 6px rgba(0, 0, 0, 0.7);
+  /* Borders */
+  --border: #2b3a55;
+
+  /* Status */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error:   #fb7185;
+
+  /* Focus */
+  --focus-ring: #6ea8ff;
+
+  /* On-colors */
+  --on-primary:   #0b1220;
+  --on-secondary: #0b1220;
+  --on-accent:    #0b1220;
 }
